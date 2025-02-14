@@ -1,0 +1,186 @@
+/* Container styling */
+.search_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* background-color: var(--bg-color); */
+    /* color: var(--text-color); */
+    
+    flex-wrap: wrap; 
+}
+.search_item h1{
+    /* color:purple; */
+}
+
+
+/* Search bar styling */
+.searchBar {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    /* background-color:black; */
+    /* background-color: var(--input-bg);
+    color: var(--input-text); */
+    flex: 1; /* Allow search bar to take remaining space */
+    margin: 0 10px;
+    min-width: 150px; /* Ensures input doesn’t shrink too much */
+    color:black;
+}
+
+.searchBar::placeholder {
+    /* color: black; */
+}
+
+/* Item styles */
+.item_styles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+
+
+.item {
+    /* background-color: var(--card-bg); */
+    /* color: var(--card-text); */
+    
+    padding: 25px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 250px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.item h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    cursor: pointer;
+    color:purple;
+}
+
+.item:hover {
+    background-color: rgb(156, 154, 154);
+}
+
+/* Delete icon */
+.delete_icon {
+    cursor: pointer;
+    color: grey;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.delete_icon:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+
+.confirmation {
+    background: gray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px; /* Limit the modal width */
+}
+
+.confirmation p {
+    margin-bottom: 20px; /* Add space between the question and buttons */
+    font-size: 18px;
+    font-weight: bold;
+    /* color:rebeccapurple; */
+
+}
+
+.confirmation button {
+    margin: 10px 5px; /* Add spacing between the buttons */
+    padding: 10px 20px; /* Button size */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is above other elements */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search_item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .searchBar {
+        width: 100%; /* Full-width search bar on small screens */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .item_styles {
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .item {
+        width: 100%; /* Items take full width */
+        text-align: left; /* Left-align text for readability */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search_item {
+        padding: 5px; /* Increased padding for small screens */
+    }
+    .searchBar {
+       margin-left: auto;
+       width: 95%;
+    }
+    .add-button{
+        width:50%;
+        min-width: 20px;
+    }
+    .item {
+        width: 100%; /* Full width on smaller devices */
+        font-size: 1rem; /* Adjust font size */
+        padding: 12px; /* Increase padding for better readability */
+    }
+
+    .delete_icon {
+        font-size: 1rem; /* Adjust icon size for smaller screens */
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    
+    .confirmation{
+        width: 80%;
+        max-width: 350px;
+    }
+}

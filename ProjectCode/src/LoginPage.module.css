@@ -1,0 +1,271 @@
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins/Poppins-Regular.otf);    /*Applying font family*/
+
+}
+
+body{
+  font-family: Poppins;
+ 
+  }
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.style1 {
+  background-color: rgba(177, 224, 36, 0.424);
+  margin-bottom: 0;
+  padding: 50px;  /* Increase padding for a spacious look */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.style2 {
+  background-color: rgba(177, 224, 36, 0.424);
+  padding: 25px;  /* Increase padding for a spacious look */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.style1 div {
+  margin: 10px;
+}
+
+/* Buttons styling */
+.btn_style {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.backbutton_style{
+  /* display: flex; */
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+button {
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Slightly darker green */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Input group styling */
+.input_group {
+  display: flex;
+  flex-direction: column; /* Stack labels and inputs vertically */
+}
+
+.input_group label {
+  margin-bottom: 5px; /* Space between label and input */
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.input_group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Focus and invalid styles */
+input:focus {
+  outline: none;
+  border: 2px solid #4CAF50; /* Green border on focus */
+  box-shadow: 0 0 5px #4CAF50; /* Green glow */
+}
+
+
+input:invalid {
+  border: 2px solid red; /* Red border for invalid input */
+}
+
+/* Error message styling */
+sup {
+  color: red;
+  top: -2px;
+  font-size: 95%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.FieldError {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px; /* Space below input field */
+}
+
+/* Global error message */
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.input_group input:valid {
+  border: 2px solid #4CAF50;
+}
+
+.input_group input:invalid {
+  border: 2px solid red;
+}
+/* Background Image for the Login Page */
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./assets/login.jpg') no-repeat center center; 
+  /* background: url('./assets/login1.jpg') no-repeat center center/cover;  */
+  
+  /* Replace 'your-image-path.jpg' with your actual image path */
+  background-color:white; /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Dimmed background */
+  z-index: 1;
+  background-repeat: no-repeat;       /* Prevents tiling */ 
+  background-size: cover;            
+  position: relative; /* To add overlay if needed */
+  transition: filter 0.5s ease; 
+
+}
+
+form {
+  position: relative;
+  z-index: 2; /* Ensure the form is above the overlay */
+  background: rgba(255, 255, 255, 255); /* Slightly transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+form.hidden {
+  opacity: 0; /* Hide the form initially */
+}
+
+/* Styles for the initial 'Get Started' button */
+.getStartedContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.6);   */
+  /* Optional dark overlay */
+}
+
+.getStartedButton {
+  margin-top: 400px;
+  padding: 20px 40px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.getStartedButton:hover {
+  background-color: #45a049;
+}
+
+
+/* .darkBackground {
+  filter: brightness(50%); 
+  transition: filter 0.5s ease; 
+} */
+
+.App.darken::before {
+  opacity: 1; /* Fully visible when darkened */
+}
+
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .App {
+      background-size: contain;          /* Better for full coverage without gaps */
+      background-position: center ;     /* Centers the background image */
+      background-repeat: no-repeat;    /* Prevents tiling */
+      /* background: url('./assets/login.jpg') no-repeat center center/cover;  */
+  }
+ 
+  .getStartedButton {
+    margin-top: 400px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .getStartedButton:hover {
+    background-color: #45a049;
+  }
+
+  
+  .style1 {
+      padding: 5px; /* Reduce padding for small screens */
+      /* overflow: hidden; */
+      margin: auto;
+  }
+
+  .style1 div {
+      margin: 5px;
+  }
+
+  button {
+      font-size: 0.9rem; /* Slightly smaller font for buttons */
+  }
+  button:hover {
+    background-color: #45a049; /* Slightly darker green */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input_group input {
+      font-size: 0.9rem; /* Smaller font for inputs */
+  }
+
+  .input_group label {
+      margin-right: 0; /* Remove extra margin */
+      font-size: 0.9rem; /* Adjust font size for labels */
+  }
+ 
+}
+
+

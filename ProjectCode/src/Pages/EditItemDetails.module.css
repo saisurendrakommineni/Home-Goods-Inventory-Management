@@ -1,0 +1,115 @@
+/* General form container styling */
+.form_container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Input field styling */
+.form_input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the buttons */
+.submit_button, .cancel_button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Specific styles for each button */
+.submit_button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit_button:hover {
+    background-color: #45a049;
+}
+
+.cancel_button {
+    background-color: #f44336;
+    color: white;
+}
+
+.cancel_button:hover {
+    background-color: #da190b;
+}
+
+/* Back button styling */
+.search_item button {
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.search_item button:hover {
+    background-color: #bbb;
+}
+
+.confirmation {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px; /* Limit the modal width */
+}
+
+.confirmation p {
+    margin-bottom: 20px; /* Add space between the question and buttons */
+    font-size: 18px;
+    font-weight: bold;
+    /* color:rebeccapurple; */
+
+}
+
+.confirmation button {
+    margin: 10px 5px; /* Add spacing between the buttons */
+    padding: 10px 20px; /* Button size */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is above other elements */
+}
+@media (max-width: 600px) {
+    
+    .confirmation{
+        width: 80%;
+        max-width: 350px;
+    }
+}

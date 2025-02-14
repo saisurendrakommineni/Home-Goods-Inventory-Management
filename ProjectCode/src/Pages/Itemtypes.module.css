@@ -1,0 +1,244 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;  /* Prevents horizontal scroll */
+  }
+
+.item_styles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;
+    justify-content: center;
+    margin: 50px; 
+}
+
+.item_container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
+    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    margin-bottom: 20px;
+    padding: 20px;
+    /* background-color: #fff; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    
+    gap: 20px;
+}
+.item_container :hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+.item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    /* color: purple; */
+}
+
+
+.image_style {
+    width: 200px; 
+    height:150px; 
+    object-fit: contain; 
+    border-radius: 5px;
+    margin-bottom: 15px; 
+}
+
+
+
+
+.item strong {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.delete_icon_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+.delete_icon {
+    cursor: pointer;
+    color: grey;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.delete_icon:hover {
+    color: red;
+    transform: scale(1.2); 
+}
+
+
+.search_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* background-color: var(--bg-color);
+    color: var(--text-color); */
+    flex-wrap: wrap; 
+}
+.search_item h1{
+    color: purple;
+}
+
+/* Search bar styling */
+.searchBar {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    /* background-color:black; */
+    color: aliceblue;
+    /* background-color: var(--input-bg);
+    color: var(--input-text); */
+    flex: 1; /* Allow search bar to take remaining space */
+    margin: 0 10px;
+    /* min-width: 150px;  */
+    color:black;
+
+}
+
+
+
+/* Buttons: Add Item and Back */
+button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Confirmation modal styles */
+.confirmation {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px; 
+}
+
+.confirmation p {
+    margin-bottom: 20px; 
+    font-size: 18px;
+    font-weight: bold;
+    /* color:rebeccapurple; */
+
+}
+
+.confirmation button {
+    margin: 10px 5px; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+
+@media (max-width: 768px) {
+    .search_item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .searchBar {
+        width: 100%; /* Full-width search bar on small screens */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .item_styles {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        
+       
+    }
+    .item {
+       
+        /* text-align: center; */
+    }
+    
+    .item_container {
+      
+        justify-content: center;
+        padding: 15px 80px;
+    
+       
+    }
+    .image_style {
+        width: 200px; 
+        height:200px;
+        object-fit: contain; 
+        border-radius: 5px;
+       
+    }
+    
+    
+    .search_item {
+        padding: 5px; /* Adjust padding for small screens */
+    }
+
+    .searchBar {
+        width: 85%; /* Full-width search bar on small screens */
+        margin: 10px 0px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .confirmation {
+        width: 80%;
+        max-width: 350px; /* Adjust modal width */
+    }
+}
+

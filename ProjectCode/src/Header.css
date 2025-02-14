@@ -1,0 +1,98 @@
+@font-face {
+    font-family: Poppins;
+    src: url(/fonts/Poppins/Poppins-Regular.otf);    /*Applying font family*/
+  
+  }
+  
+  body{
+    font-family: Poppins;
+   
+    }
+    button {
+        font-family: 'Poppins'; /* Force override */
+      }
+.header-container {
+    background-color:  #4CAF50;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background: inherit; */
+     /* Matches the parent background */
+    position: relative; /* Ensures it aligns within the layout */
+    z-index: 1; /* Ensures the header stays above other content */
+    width: 97%;
+    margin-right: 10px;
+    font-family: Poppins;
+}
+
+
+.header-button {
+    height: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0 15px; 
+    flex-shrink: 0; 
+    min-width: 120px; 
+    background: inherit;
+
+}
+
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is above other content */
+}
+
+.confirmation-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px; /* Maximum width of the modal */
+}
+
+.confirmation-modal button {
+    margin: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.confirmation-modal p {
+    margin-bottom: 20px; /* Add space between the question and buttons */
+    font-size: 18px;
+    font-weight: bold;
+    /* color:rebeccapurple; */
+
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .header-container {
+        /* flex-direction: column; */
+        align-items: center;
+        padding: 10px;
+    }
+    .header-button {
+        margin: 5px;
+        width: 22%;
+        min-width: 20px;
+    }
+    .confirmation-modal {
+        width: 80%;
+        max-width: 350px;
+    }
+}
+
+
+

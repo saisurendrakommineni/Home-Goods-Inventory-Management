@@ -1,0 +1,11 @@
+/* themeStyles.css */
+.layout-dark {
+    background-color: #333;
+    color: #f8f8f8;
+  }
+  
+  .layout-light {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
